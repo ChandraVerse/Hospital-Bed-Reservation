@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Bed Reservation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hospital Bed Reservation</h1>
+    <div id="availabilityMessage"></div>
+
+    <!-- Hospital Bed Vacancy Section -->
+    <div id="availabilitySection">
+      <h2>Check Vacancy for Beds</h2>
+      <form id="availabilityForm">
+        <label for="hospitalSelect">Select Hospital:</label>
+        <select id="hospitalSelect" name="hospital"> 
+          <option value="hospital1">Zenith Super Specialist Hospital (175 beds)</option>
+          <option value="hospital2">Sagar Dutta Hospital (500 beds)</option>
+          <option value="hospital3">R G Kar Medical College and Hospital (1260 beds)</option>
+          <option value="hospital4">Ruby General Hospital (276 beds)</option>
+          <option value="hospital5">Medica Superspecialty Hospital (400 beds)</option>
+          <option value="hospital6">Apollo Gleneagles Hospital (700 beds)</option>
+          <option value="hospital7">HCG EKO Cancer Centre (88 beds)</option>
+          <option value="hospital8">Calcutta Medical Research Institute (400 beds)</option>
+          <option value="hospital9">Institute of Neurosciences (195 beds)</option>
+          <option value="hospital10">BM Birla Heart Research Centre (210 beds)</option>
+          <option value="hospital11">B.P Poddar Hospital (205 beds)</option>
+          <option value="hospital12">Nightingale Hospital (150 beds)</option>
+          <option value="hospital13">NIL RATAN SIRCAR MEDICAL COLLEGE & HOSPITAL (1920 beds)</option>
+          
+        </select>
+        <button type="submit">Check Availability</button>
+      </form>
+    </div>
+
+    <!-- Bed Reservation Form Section -->
+    <div id="reservationSection" style="display: none;">
+      <h2>Bed Reservation Form</h2>
+      <form id="reservationForm">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" name="name" required>
+        
+        <label for="mobileInput">Mobile Number:</label>
+        <input type="tel" id="mobileInput" name="mobile" pattern="[0-9]{10}" required>
+        
+        <label for="addressInput">Address:</label>
+        <textarea id="addressInput" name="address" rows="3" required></textarea>
+        
+        <label for="bedsInput">Number of Beds:</label>
+        <input type="number" id="bedsInput" name="beds" min="1" max="10" required>
+        
+        <!-- Date Section -->
+        <label for="dateInput">Reservation Date:</label>
+        <input type="date" id="dateInput" name="date" required>
+
+        <button type="submit">Submit Reservation</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
 
